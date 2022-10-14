@@ -1,3 +1,3 @@
 # Tailwind Traders Website
 
-testing & learning devops
+testing & learning devops.
