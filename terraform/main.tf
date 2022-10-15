@@ -41,7 +41,7 @@ resource "azurerm_service_plan" "servicePlan" {
       azurerm_resource_group.rg
     ]
     os_type = "Linux"
-    sku_name = "B2"
+    sku_name = "B1"
 
  tags = {
     Env              = "Test",
