@@ -336,3 +336,5 @@ ASALocalRun/
 Deploy/helm/__values/*
 !Deploy/helm/__values/readme.txt
 /Source/Tailwind.Traders.Web/.vscode
+terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.0.2/windows_amd64/terraform-provider-azurerm_v3.0.2_x5.exe
+
