@@ -42,13 +42,14 @@ jobs:
         run: |
           terraform plan -out "tf_plan" -input=false
           ls -l
+          pwd
 #         terraform show "tf_plan"
 
       - name: upload TF plan as artifact
         uses: actions/upload-artifact@v2
         with:
             name: tf_paln
-            path: ./terrafrom
+            path: /terrafrom
             if-no-files-found: error 
             retention-days: 7  
 
