@@ -74,10 +74,11 @@ jobs:
           node-version: ${{matrix.node}}
       - name: tests
         run: |
+          ls -l
           pwd
           ls -l
       - name: Install dependencies in client app
-        working-directory: TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp
+        working-directory: ./Source/Tailwind.Traders.Web/ClientApp
         run: | 
           pwd
           npm Install
