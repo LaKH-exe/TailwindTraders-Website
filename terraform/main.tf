@@ -5,7 +5,12 @@ terraform {
         version = "~> 3.0.2"
     }
   }
-
+backend "azurerm" {
+  resource_group_name = "tfstate"
+  storage_account_name = "tfstatetestlab55"
+  container_name = "tfstate"
+  key = "terrafrom.tfstate"
+}
   required_version = ">= 1.1.0"
 }
 
@@ -24,7 +29,7 @@ resource "azurerm_resource_group" "rg" {
     Env              = "Test",
     deploymentMethod = "terraform",
     Owner            = "La",
-    Region           = "westus"
+    Region           = "westus2"
   }
 }
 
@@ -42,7 +47,7 @@ resource "azurerm_service_plan" "servicePlan" {
     Env              = "Test",
     deploymentMethod = "terraform",
     Owner            = "La",
-    Region           = "westus"
+    Region           = "westus2"
   }
 }
 
@@ -63,6 +68,6 @@ resource "azurerm_linux_web_app" "app" {
     Env              = "Test",
     deploymentMethod = "terraform",
     Owner            = "La",
-    Region           = "westus"
+    Region           = "westus2"
   }
 }
