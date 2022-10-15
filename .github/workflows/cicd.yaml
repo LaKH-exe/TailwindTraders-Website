@@ -41,6 +41,7 @@ jobs:
         continue-on-error: true
         run: |
           terraform plan -out "tf_plan" -input=false
+          ls -l
 #         terraform show "tf_plan"
 
       - name: upload TF plan as artifact
