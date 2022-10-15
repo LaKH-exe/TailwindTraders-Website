@@ -47,9 +47,10 @@ jobs:
 
       - name: upload TF plan as artifact
         uses: actions/upload-artifact@v2
+        continue-on-error: true
         with:
             name: tf_paln
-            path: {{pwd}}/terrafrom
+            path: ./terrafrom
             if-no-files-found: error 
             retention-days: 7  
 
