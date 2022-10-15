@@ -74,13 +74,13 @@ jobs:
           node-version: ${{matrix.node}}
 
       - name: Install dependencies in client app
-        working-directory: Source\Tailwind.Traders.Web\ClientApp
+        working-directory: Source/Tailwind.Traders.Web/ClientApp
         run: | 
           pwd
           npm Install
 
       - name: build and publish with dotnet
-        working-directory: Source\Tailwind.Traders.Web
+        working-directory: Source/Tailwind.Traders.Web
         run: | 
           dotnet build --configuration Release
           dotnet publish -c Release -o publish
