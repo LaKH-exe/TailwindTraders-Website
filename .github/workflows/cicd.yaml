@@ -72,7 +72,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{matrix.node}}
-
+      - name: tests
+        run: |
+          pwd
+          ls -l
       - name: Install dependencies in client app
         working-directory: Source/Tailwind.Traders.Web/ClientApp
         run: | 
