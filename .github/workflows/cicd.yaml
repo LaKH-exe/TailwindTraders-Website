@@ -79,8 +79,10 @@ jobs:
       - name: Install dependencies in client app
         working-directory: ./Source/Tailwind.Traders.Web/ClientApp
         run: | 
-          pwd
+          pwd $$ ls -l
+          npm -v
           npm Install
+
 
       - name: build and publish with dotnet
         working-directory: Source/Tailwind.Traders.Web
