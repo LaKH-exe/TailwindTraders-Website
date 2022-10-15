@@ -66,7 +66,8 @@ jobs:
         node: [10.16.3,14,16,18]
     runs-on: ${{matrix.os}}
     steps:
-#      - uses: actions/checkout@master
+      - name: actions/checkout
+        uses: actions/checkout@v2
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -74,9 +75,7 @@ jobs:
           node-version: ${{matrix.node}}
       - name: tests
         run: |
-          ls -l
-          pwd
-          ls -l
+          ls -l && pwd
       - name: Install dependencies in client app
         working-directory: ./Source/Tailwind.Traders.Web/ClientApp
         run: | 
