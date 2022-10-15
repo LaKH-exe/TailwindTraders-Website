@@ -41,15 +41,17 @@ jobs:
         continue-on-error: true
         run: |
           terraform plan -out "tf_plan" -input=false
-          terraform show "tf_plan"
+#         terraform show "tf_plan"
 
       - name: upload TF plan as artifact
-        uses: actions/upload-artifact@v2
+        
+      - uses: actions/upload-artifact@v2
         with:
-           working-directory: ./terraform
-            path:./artifacts/tf_paln
-            if-no-files-found:error 
-            retention-days:7  
+            name: tf_paln
+            path: ./terrafrom
+            if-no-files-found: error 
+            retention-days: 7  
+
       - name: terraform apply
         working-directory: ./terraform
         run: terraform apply -input=false -auto-approve
