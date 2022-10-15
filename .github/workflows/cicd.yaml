@@ -77,9 +77,10 @@ jobs:
         run: |
           ls -l && pwd
       - name: Install dependencies in client app
-        working-directory: ./Source/Tailwind.Traders.Web/ClientApp
+        working-directory: /Source/Tailwind.Traders.Web/ClientApp
         run: | 
           pwd $$ ls -l
+          ls -l /Source/Tailwind.Traders.Web/ClientApp
           npm -v
           npm Install
 
