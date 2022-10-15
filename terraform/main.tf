@@ -32,6 +32,9 @@ resource "azurerm_service_plan" "servicePlan" {
     name = "plan-westus-test"
     location = var.default_location
     resource_group_name = var.resource_group_name
+    depends_on = [
+      azurerm_resource_group.rg
+    ]
     os_type = "Linux"
     sku_name = "B2"
 
@@ -49,7 +52,9 @@ resource "azurerm_linux_web_app" "app" {
     location = var.default_location
     resource_group_name = var.resource_group_name
     service_plan_id = azurerm_service_plan.servicePlan.id
-
+    depends_on = [
+      azurerm_service_plan.servicePlan
+    ]
   site_config {
     
   }
