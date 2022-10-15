@@ -6,6 +6,6 @@ default = "rg-test-webapp"
 
 variable "default_location" {
 
-    default = "West US 2"
+    default = "Central US"
   
 }
