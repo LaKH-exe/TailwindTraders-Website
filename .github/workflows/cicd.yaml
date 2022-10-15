@@ -78,9 +78,10 @@ jobs:
           ls -l && pwd
       - name: tests
         run: |
+          cd ./Source/Tailwind.Traders.Web/ClientApp
           ls -l && pwd
       - name: Install dependencies in client app
-        working-directory: /Source/Tailwind.Traders.Web/ClientApp
+        working-directory: ./Source/Tailwind.Traders.Web/ClientApp
         run: | 
           ls -l && pwd
           echo "web:"
