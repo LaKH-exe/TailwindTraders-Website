@@ -44,7 +44,7 @@ jobs:
 #         terraform show "tf_plan"
 
       - name: upload TF plan as artifact
-      - uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
             name: tf_paln
             path: ./terrafrom
